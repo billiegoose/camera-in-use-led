@@ -1,5 +1,5 @@
 {
-  "name": "osx",
+  "name": "tinypico-ble-led",
   "version": "0.0.0",
   "description": "",
   "main": "main.js",
