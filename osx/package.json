@@ -1,0 +1,16 @@
+{
+  "name": "osx",
+  "version": "0.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": "main.js",
+  "keywords": [],
+  "author": "William Hilton <wmhilton@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "noble-mac": "github:Timeular/noble-mac"
+  }
+}
