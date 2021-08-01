@@ -61,7 +61,7 @@ function connectToUart(peripheral) {
                   }
                 });
               });
-              uartReadChar.once('data', function(data) {
+              uartReadChar.on('data', function(data) {
                 res = data.toString('utf8');
                 if (res === 'ack') {
                   uartReadChar.unsubscribe(function(err) {
@@ -71,6 +71,8 @@ function connectToUart(peripheral) {
                     console.log('unsubscribed');
                     peripheral.disconnect();
                   });
+                } else {
+                  console.log(res);
                 }
               });
             } else if (char.properties.includes('write')) {
