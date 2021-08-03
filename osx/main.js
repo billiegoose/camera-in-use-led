@@ -21,6 +21,7 @@ stream.stdout.on('data', (data) => {
 setInterval(() => {
   let { stdout } = spawnSync('node', [path.join(__dirname, 'ble.js'), 'bat'], { encoding: 'utf8', stdio: 'pipe' })
   const matches = /subscribed\n(.*)\nunsubscribed/g.exec(stdout)
+  if (matches === null) return;
   const voltage = matches[1];
   console.log(`battery voltage: ${voltage}`);
   fs.appendFileSync('battery.log', `${voltage}, ${Date.now()}\n`);
