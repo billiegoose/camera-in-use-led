@@ -24,4 +24,4 @@ setInterval(() => {
   const voltage = matches[1];
   console.log(`battery voltage: ${voltage}`);
   fs.appendFileSync('battery.log', `${voltage}, ${Date.now()}\n`);
-}, 60_000);
+}, 300_000);
